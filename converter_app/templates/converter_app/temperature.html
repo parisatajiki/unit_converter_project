@@ -161,13 +161,13 @@
 <form class="converter-container" method="post">
     {% csrf_token %}
     <div class="converter-header">
-        <h1>Weight Converter</h1>
+        <h1>Temperature Converter</h1>
     </div>
 
     <div class="input-section">
         <div class="input-group">
-            <label for="weight">Weight Value</label>
-            <input required type="number" name="number" id="weight" placeholder="Enter weight">
+            <label for="temperature">Temperature Value</label>
+            <input required name="number" type="number" id="temperature" placeholder="Enter temperature">
         </div>
 
         <div class="input-group">
@@ -198,13 +198,11 @@
     <div class="result-section">
         <div id="result">{{ result }}</div>
     </div>
-
-
     <div class="footer">
         <p>Unit Converter ©</p>
     </div>
-    </div>
 </form>
+
 <script>
     // Wait for DOM to be fully loaded
     document.addEventListener('DOMContentLoaded', function () {

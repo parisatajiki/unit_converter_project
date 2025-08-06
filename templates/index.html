@@ -100,17 +100,9 @@
         </div>
         
         <div class="btn-container flex flex-wrap justify-center gap-6 mb-8">
-            <button class="btn btn-length text-white px-8 py-6 rounded-xl shadow-lg font-semibold text-xl hover:shadow-xl">
-                Length
-            </button>
-            
-            <button class="btn btn-temperature text-white px-8 py-6 rounded-xl shadow-lg font-semibold text-xl hover:shadow-xl">
-                Temperature
-            </button>
-            
-            <button class="btn btn-weight text-white px-8 py-6 rounded-xl shadow-lg font-semibold text-xl hover:shadow-xl">
-                Weight
-            </button>
+            <a href="{% url 'converter_app:length' %}" class="btn btn-length text-white px-8 py-6 rounded-xl shadow-lg font-semibold text-xl hover:shadow-xl">Length</a>
+            <a href="{% url 'converter_app:temperature' %}" class="btn btn-temperature text-white px-8 py-6 rounded-xl shadow-lg font-semibold text-xl hover:shadow-xl">Temperature</a>
+            <a href="{% url 'converter_app:weight' %}" class="btn btn-weight text-white px-8 py-6 rounded-xl shadow-lg font-semibold text-xl hover:shadow-xl">Weight</a>
         </div>
         
         <div class="text-center mt-12">
