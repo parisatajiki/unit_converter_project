@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #10b981;
+            --dark: #1e293b;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            min-height: 100vh;
+        }
+        
+        .card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        
+        .btn {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-length {
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+        }
+        
+        .btn-temperature {
+            background: linear-gradient(45deg, #f97316, #ec4899);
+        }
+        
+        .btn-weight {
+            background: linear-gradient(45deg, #10b981, #14b8a6);
+        }
+        
+        .bg-blob {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .blob-1 {
+            top: 10%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+        
+        .blob-2 {
+            bottom: 10%;
+            right: 10%;
+            width: 250px;
+            height: 250px;
+            background: var(--accent);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+        
+        @media (max-width: 768px) {
+            .btn-container {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-4">
+    <!-- Background blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    
+    <div class="card rounded-2xl p-8 max-w-3xl w-full">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Unit Converter</h1>
+            <p class="text-lg text-gray-600 max-w-lg mx-auto">
+                Welcome to our Unit Converter! Quickly switch between units of Length, Temperature, and Weight with ease.
+            </p>
+        </div>
+        
+        <div class="btn-container flex flex-wrap justify-center gap-6 mb-8">
+            <button class="btn btn-length text-white px-8 py-6 rounded-xl shadow-lg font-semibold text-xl hover:shadow-xl">
+                Length
+            </button>
+            
+            <button class="btn btn-temperature text-white px-8 py-6 rounded-xl shadow-lg font-semibold text-xl hover:shadow-xl">
+                Temperature
+            </button>
+            
+            <button class="btn btn-weight text-white px-8 py-6 rounded-xl shadow-lg font-semibold text-xl hover:shadow-xl">
+                Weight
+            </button>
+        </div>
+        
+        <div class="text-center mt-12">
+            <p class="text-gray-500">More conversion types coming soon!</p>
+        </div>
+    </div>
+</body>
+</html>
